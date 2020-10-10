@@ -1,6 +1,6 @@
-"""
-Let's use while loops to create a guessing game.
+# Guessing Number Game
 
+"""
 The Challenge:
 
 Write a program that picks a random integer from 1 to 100, and has players guess the number. The rules are:
@@ -13,7 +13,6 @@ On all subsequent turns, if a guess is
 closer to the number than the previous guess return "WARMER!"
 farther from the number than the previous guess, return "COLDER!"
 When the player's guess equals the number, tell them they've guessed correctly and how many guesses it took!
-You can try this from scratch, or follow the steps outlined below. A separate Solution notebook has been provided.
 """
 
 from random import randint
