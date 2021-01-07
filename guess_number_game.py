@@ -9,7 +9,7 @@ print("If your guess is within 10 of my number, I'll tell you you're WARM")
 print("If your guess is farther than your most recent guess, I'll say you're getting COLDER")
 print("If your guess is closer than your most recent guess, I'll say you're getting WARMER")
 print("LET'S PLAY!")
-guesses = [0]
+guesses = []
 while True:
     num = int(input("Please enter a number here:"))
     if num < 1 or num > 100:
@@ -20,15 +20,13 @@ while True:
         print("Your guesses are:", guesses)
         break
     guesses.append(num)
-    if guesses[-2]:
+    if len(guesses) >= 2:
         if abs(guesses[-2] - x) > abs(num - x):
             print("WARMER!")
-        else:
+        elif abs(guesses[-2] - x) < abs(num - x):
             print("COLDER!")
     else:
         if num in range(x - 10, x):
             print("WARM!")
         else:
             print("COLD!")
-
-
